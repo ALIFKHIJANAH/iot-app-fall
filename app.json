@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Fall Detection",
+    "slug": "fall.detect",
+    "version": "1.0.0",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ]
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fall.iot",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDLQtG7UFzSnwXMUSrztTivcvU3wvCWtyY"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.fall.iot",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDLQtG7UFzSnwXMUSrztTivcvU3wvCWtyY"
+        }
+      }
+    }
+  }
+}
