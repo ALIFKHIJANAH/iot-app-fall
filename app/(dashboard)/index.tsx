@@ -11,10 +11,12 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 
 import Ilustration from '../../assets/icons/ilustration.png';
+import { useNotification } from 'lib/firebase/useNotification';
 
 const audioSource = require('../../assets/audio/sound.mp3');
 
 const Dashboard = () => {
+  const { sendPushNotification } = useNotification();
   const [deviceData, setDeviceData] = useState({
     name: 'WheelChair 2',
     status: 'Offline',
@@ -43,6 +45,11 @@ const Dashboard = () => {
       notificationsQuery,
       (snapshot) => {
         const notificationsList = [];
+        snapshot.docChanges().forEach((change) => {
+          if (change.type === 'added') {
+            const notification = change.doc.data();
+          }
+        });
         snapshot.forEach((doc) => {
           notificationsList.push({
             id: doc.id,

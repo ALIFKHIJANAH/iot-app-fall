@@ -1,8 +1,15 @@
 import Button from 'components/Button';
 import { useRouter } from 'expo-router';
+import { useNotification } from 'lib/firebase/useNotification';
+import { useEffect } from 'react';
 import { View, Text, Image } from 'react-native';
 
 const LoginScreen = () => {
+  const { expoPushToken,sendPushNotification } = useNotification();
+  console.log(expoPushToken,'token');
+  useEffect(() => {
+    console.log('Current push token:', expoPushToken);
+  }, [expoPushToken]);
   const router = useRouter();
   return (
     <View className="flex-1 items-center justify-center bg-[#F2F2F2] p-4 pt-0">

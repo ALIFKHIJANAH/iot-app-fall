@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Fall Detection",
-    "slug": "fall.detect",
+    "slug": "fall-detect",
     "version": "1.0.0",
     "web": {
       "favicon": "./assets/favicon.png"
@@ -10,6 +10,13 @@
       "tsconfigPaths": true
     },
     "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff"
+        }
+      ],
       "expo-router",
       [
         "expo-video",
@@ -25,6 +32,11 @@
         }
       ]
     ],
+    "notification": {
+      "icon": "./assets/icon.png",
+      "color": "#ffffff",
+      "iosDisplayInForeground": true
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -51,10 +63,18 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.fall.iot",
+      "googleServicesFile": "./google-service.json",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyDLQtG7UFzSnwXMUSrztTivcvU3wvCWtyY"
         }
+      },
+      "permissions": ["android.permission.RECORD_AUDIO", "android.permission.MODIFY_AUDIO_SETTINGS"]
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a639e5b7-aa11-4f00-977d-862231b34224"
       }
     }
   }

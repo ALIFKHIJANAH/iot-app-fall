@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "929588096553",
+    "firebase_url": "https://test-firebase-message-4b729-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "test-firebase-message-4b729",
+    "storage_bucket": "test-firebase-message-4b729.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929588096553:android:d179187a8bf2b8633a7638",
+        "android_client_info": {
+          "package_name": "com.fall.iot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAje4gKqGY9HnpjnpqyhACE5ty7sNKmkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
